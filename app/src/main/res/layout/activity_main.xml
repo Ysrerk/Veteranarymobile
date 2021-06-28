@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="#4b6584"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="MY LOVE VETERINARY"
+            android:textColor="#f7b731"
+            android:textSize="20dp"
+            android:textStyle="bold|italic"></TextView>
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/veterinary"></ImageView>
+
+        <EditText
+            android:id="@+id/usernameet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:hint="please enter username"
+            android:textColorHint="#fc5c65"></EditText>
+
+
+        <EditText
+            android:id="@+id/emailet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="please enter email"
+            android:textColorHint="#fc5c65"></EditText>
+
+        <EditText
+            android:id="@+id/passwordet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" android:inputType="textPassword"
+            android:hint="please enter passord"
+            android:textColorHint="#fc5c65"></EditText>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"></androidx.appcompat.widget.AppCompatButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="I have registered"
+            android:textColor="#e1b12c"
+            android:textStyle="italic|bold"></TextView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
