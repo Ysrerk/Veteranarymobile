@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.onesignal.OneSignal;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     EditText usernameed,emailed,password;
     AppCompatButton registerbutton;
     String usernamev,emailv,passwordv;
+    TextView registeredtext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
         definition();
         registeristek();
+        registeredtext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginegecis();
+            }
+        });
     }
 
 
@@ -44,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         emailed=findViewById(R.id.emailet);
         password=findViewById(R.id.passwordet);
         registerbutton=findViewById(R.id.loginbutton);
+        registeredtext=findViewById(R.id.registeredtext);
     }
     public void registeristek(){
 
@@ -77,5 +86,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+    public void loginegecis(){
+
+        Intent intent=new Intent(getApplicationContext(),Login.class);
+        startActivity(intent);
     }
 }

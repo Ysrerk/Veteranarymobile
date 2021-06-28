@@ -74,7 +74,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:gravity="right"
-            android:text="I have registered"
+            android:text="I have registered" android:id="@+id/registeredtext"
             android:textColor="#e1b12c"
             android:textStyle="italic|bold"></TextView>
 
