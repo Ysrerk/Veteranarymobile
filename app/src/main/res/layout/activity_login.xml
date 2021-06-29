@@ -16,7 +16,7 @@
         android:background="@drawable/veterinary"></ImageView>
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/emaillogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -27,7 +27,7 @@
     </EditText>
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordlogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -38,7 +38,7 @@
     </EditText>
 
     <Button
-        android:id="@+id/loginbutton"
+        android:id="@+id/loginbutton2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#45026145"

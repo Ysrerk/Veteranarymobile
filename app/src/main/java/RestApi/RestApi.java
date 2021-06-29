@@ -1,5 +1,6 @@
 package RestApi;
 
+import Model.LoginResult;
 import Model.Result;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -16,5 +17,9 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/beactiveregister.php")
     Call<Result>makeactive(@Field("code") String code,@Field("email") String email);
+
+    @FormUrlEncoded
+    @POST("/login.php")
+    Call<LoginResult>getloginresultt(@Field("email") String email,@Field("password") String password);
 
 }
