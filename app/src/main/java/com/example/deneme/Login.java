@@ -2,6 +2,7 @@ package com.example.deneme;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -68,6 +69,10 @@ public class Login extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
                 Toast.makeText(getApplicationContext(),response.body().getEmail(),Toast.LENGTH_LONG).show();
+                Intent intent=new Intent(Login.this,Anaekran.class);
+                startActivity(intent);
+                finish();
+
             }
 
             @Override
