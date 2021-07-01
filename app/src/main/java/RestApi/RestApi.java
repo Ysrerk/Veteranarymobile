@@ -1,6 +1,9 @@
 package RestApi;
 
+import java.util.List;
+
 import Model.LoginResult;
+import Model.Petresult;
 import Model.Result;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -21,5 +24,9 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/login.php")
     Call<LoginResult>getloginresultt(@Field("email") String email,@Field("password") String password);
+
+    @FormUrlEncoded
+    @POST("/pets.php")
+    Call<List<Petresult>> getpets(@Field("custid") String custid);
 
 }

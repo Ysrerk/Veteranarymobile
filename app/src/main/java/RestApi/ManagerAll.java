@@ -1,6 +1,9 @@
 package RestApi;
 
+import java.util.List;
+
 import Model.LoginResult;
+import Model.Petresult;
 import Model.Result;
 import retrofit2.Call;
 
@@ -19,6 +22,11 @@ public class ManagerAll  extends  BaseManager{
     public Call<LoginResult>getlognresult(String email, String password){
         Call<LoginResult>loginResultCall=getRestApiClient().getloginresultt(email,password);
         return  loginResultCall;
+    }
+
+    public Call<List<Petresult>>getpetresult(String custid){
+        Call<List<Petresult>> listCall =getRestApiClient().getpets(custid);
+        return listCall;
     }
 
 
