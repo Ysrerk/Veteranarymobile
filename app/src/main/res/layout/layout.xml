@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/petlinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#576574"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/custid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffff">
+
+        </TextView>
+        <TextView
+            android:id="@+id/petname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffff">
+
+        </TextView>
+        <TextView
+            android:id="@+id/petkind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffff">
+
+
+        </TextView>
+        <TextView
+            android:id="@+id/pettur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffff">
+
+        </TextView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp" android:id="@+id/petimage"></ImageView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

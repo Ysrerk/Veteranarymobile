@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.onesignal.OneSignal;
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText usernameed,emailed,password;
     AppCompatButton registerbutton;
-    String usernamev,emailv,passwordv;
+    String usernamev,emailv,passwordv,custid;
     TextView registeredtext;
 
     @Override
@@ -63,10 +64,15 @@ public class MainActivity extends AppCompatActivity {
                 usernamev=usernameed.getText().toString();
                 emailv=emailed.getText().toString();
                 passwordv=password.getText().toString();
+
                Call<Result>resultCall=managerAll.alsonuc(usernamev,emailv,passwordv);
                resultCall.enqueue(new Callback<Result>() {
                    @Override
                    public void onResponse(Call<Result> call, Response<Result> response) {
+                       custid=response.body().getCustid();
+
+
+                       Toast.makeText(getApplicationContext(),"oldum",Toast.LENGTH_LONG).show();
 
 
 
@@ -75,11 +81,15 @@ public class MainActivity extends AppCompatActivity {
                    @Override
                    public void onFailure(Call<Result> call, Throwable t) {
 
+                       Toast.makeText(getApplicationContext(),"olmadi",Toast.LENGTH_LONG).show();
+
                    }
                });
 
                 Intent intent=new Intent(getApplicationContext(), Main2Activity.class);
+
                 intent.putExtra("email",emailv);
+
                 startActivity(intent);
             }
         });
@@ -90,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
     public void loginegecis(){
 
         Intent intent=new Intent(getApplicationContext(),Login.class);
+
         startActivity(intent);
     }
 }

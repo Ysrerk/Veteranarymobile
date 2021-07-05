@@ -4,9 +4,18 @@ public class Result {
 
     private boolean tf;
     private String text;
+    private String custid;
 
     public boolean isTf() {
         return tf;
+    }
+
+    public String getCustid() {
+        return custid;
+    }
+
+    public void setCustid(String custid) {
+        this.custid = custid;
     }
 
     public void setTf(boolean tf) {
@@ -26,6 +35,7 @@ public class Result {
         return "Result{" +
                 "tf=" + tf +
                 ", text='" + text + '\'' +
+                ", custid='" + custid + '\'' +
                 '}';
     }
 }

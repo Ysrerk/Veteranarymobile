@@ -42,6 +42,7 @@ public class Login extends AppCompatActivity {
         //shared prefeerences de editor deki degerler null mu diye kontrol edilip degilse  ana ekrana gonderiliyor
         if(sharedPreferences.getString("id",null)!=null && sharedPreferences.getString("username",null)!=null&&sharedPreferences.getString("email",null)!=null){
             Intent intent=new Intent(Login.this,Anaekran.class);
+            intent.putExtra("custid",sharedPreferences.getString("id",null));
             startActivity(intent);
             finish();
         }
@@ -118,8 +119,11 @@ public class Login extends AppCompatActivity {
 
 
                 Intent intent=new Intent(Login.this,Anaekran.class);
+                intent.putExtra("custid2",response.body().getId());
+                intent.putExtra("username2",username);
+                intent.putExtra("email2",email);
                 startActivity(intent);
-                finish();
+
 
             }
 
