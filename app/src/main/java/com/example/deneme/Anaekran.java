@@ -21,7 +21,7 @@ import retrofit2.Response;
 public class Anaekran extends AppCompatActivity {
 
 
-    ImageView mypetimageview;
+    ImageView mypetimageview,questionfinger;
 
     String custid,username,email;
 
@@ -46,6 +46,16 @@ public class Anaekran extends AppCompatActivity {
             }
         });
 
+        questionfinger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Anaekran.this,Question.class);
+                intent.putExtra("custid",custid);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
     public void degerlerial(){
@@ -56,6 +66,7 @@ public class Anaekran extends AppCompatActivity {
 
     public void tanimla(){
         mypetimageview=findViewById(R.id.clickicon3);
+        questionfinger=findViewById(R.id.questionfinger);
     }
 
 

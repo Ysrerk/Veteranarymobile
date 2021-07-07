@@ -4,6 +4,7 @@ import java.util.List;
 
 import Model.LoginResult;
 import Model.Petresult;
+import Model.Questionresult;
 import Model.Result;
 import retrofit2.Call;
 
@@ -27,6 +28,10 @@ public class ManagerAll  extends  BaseManager{
     public Call<List<Petresult>>getpetresult(String custid){
         Call<List<Petresult>> listCall =getRestApiClient().getpets(custid);
         return listCall;
+    }
+    public Call<Questionresult> getquestionr(String custid, String question){
+        Call<Questionresult>questionresultCall=getRestApiClient().getquestionresultt(custid,question);
+        return  questionresultCall;
     }
 
 

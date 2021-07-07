@@ -4,6 +4,7 @@ import java.util.List;
 
 import Model.LoginResult;
 import Model.Petresult;
+import Model.Questionresult;
 import Model.Result;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -28,5 +29,9 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/pets.php")
     Call<List<Petresult>> getpets(@Field("custid") String custid);
+    @FormUrlEncoded
+    @POST("/question.php")
+    Call<Questionresult>getquestionresultt(@Field("custid") String custid,@Field("question") String question);
+
 
 }

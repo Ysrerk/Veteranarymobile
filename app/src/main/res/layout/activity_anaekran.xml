@@ -202,7 +202,7 @@
                     </TextView>
 
                     <ImageView
-                        android:id="@+id/clickicon4"
+                        android:id="@+id/questionfinger"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.75"
